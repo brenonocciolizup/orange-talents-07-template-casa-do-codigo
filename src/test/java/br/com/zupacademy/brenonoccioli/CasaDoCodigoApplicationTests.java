@@ -1,4 +1,4 @@
-package br.com.zupacademy.brenonoccioli.casadocodigo;
+package br.com.zupacademy.brenonoccioli;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
