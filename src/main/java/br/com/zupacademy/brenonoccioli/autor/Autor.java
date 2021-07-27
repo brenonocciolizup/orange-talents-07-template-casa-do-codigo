@@ -1,4 +1,4 @@
-package br.com.zupacademy.brenonoccioli.model;
+package br.com.zupacademy.brenonoccioli.autor;
 
 import org.hibernate.validator.constraints.UniqueElements;
 

@@ -1,12 +1,9 @@
-package br.com.zupacademy.brenonoccioli.controller;
+package br.com.zupacademy.brenonoccioli.autor;
 
-import br.com.zupacademy.brenonoccioli.controller.dto.AutorDto;
-import br.com.zupacademy.brenonoccioli.controller.form.AutorForm;
-import br.com.zupacademy.brenonoccioli.model.Autor;
-import br.com.zupacademy.brenonoccioli.repository.AutorRepository;
+import br.com.zupacademy.brenonoccioli.autor.dto.AutorDto;
+import br.com.zupacademy.brenonoccioli.autor.form.AutorForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.Validator;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 

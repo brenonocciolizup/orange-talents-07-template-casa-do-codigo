@@ -1,7 +1,7 @@
-package br.com.zupacademy.brenonoccioli.controller.form;
+package br.com.zupacademy.brenonoccioli.autor.form;
 
 
-import br.com.zupacademy.brenonoccioli.model.Autor;
+import br.com.zupacademy.brenonoccioli.autor.Autor;
 
 import javax.persistence.Column;
 import javax.validation.constraints.Email;

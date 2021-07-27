@@ -1,7 +1,6 @@
-package br.com.zupacademy.brenonoccioli.repository;
+package br.com.zupacademy.brenonoccioli.autor;
 
-import br.com.zupacademy.brenonoccioli.controller.form.AutorForm;
-import br.com.zupacademy.brenonoccioli.model.Autor;
+import br.com.zupacademy.brenonoccioli.autor.Autor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,6 @@
-package br.com.zupacademy.brenonoccioli.controller;
+package br.com.zupacademy.brenonoccioli.autor;
 
-import br.com.zupacademy.brenonoccioli.controller.form.AutorForm;
-import br.com.zupacademy.brenonoccioli.model.Autor;
-import br.com.zupacademy.brenonoccioli.repository.AutorRepository;
+import br.com.zupacademy.brenonoccioli.autor.form.AutorForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
@@ -18,6 +16,7 @@ public class ValidaEmailDuplicadoValidator implements Validator {
 
     @Override
     public boolean supports(Class<?> aClass) {
+
         return AutorForm.class.isAssignableFrom(aClass);
     }
 

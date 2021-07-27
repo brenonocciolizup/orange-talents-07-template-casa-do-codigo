@@ -1,7 +1,7 @@
-package br.com.zupacademy.brenonoccioli.controller.dto;
+package br.com.zupacademy.brenonoccioli.autor.dto;
 
 
-import br.com.zupacademy.brenonoccioli.model.Autor;
+import br.com.zupacademy.brenonoccioli.autor.Autor;
 
 public class AutorDto {
 
