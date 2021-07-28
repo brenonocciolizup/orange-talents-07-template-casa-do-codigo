@@ -2,6 +2,7 @@ package br.com.zupacademy.brenonoccioli.livro;
 
 import br.com.zupacademy.brenonoccioli.autor.Autor;
 import br.com.zupacademy.brenonoccioli.categoria.Categoria;
+import br.com.zupacademy.brenonoccioli.livro.dto.ListaLivroDto;
 import br.com.zupacademy.brenonoccioli.validador.UniqueValue;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -11,6 +12,8 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Entity
@@ -52,9 +55,6 @@ public class Livro {
         this.autor = autor;
     }
 
-    public Livro(String titulo, String resumo, String sumario, BigDecimal preco, int numeroPaginas, String isbn, LocalDate dataPublicacao, Optional<Categoria> categoria, Optional<Autor> autor) {
-    }
-
     public Long getId() {
         return id;
     }
@@ -94,5 +94,7 @@ public class Livro {
     public Autor getAutor() {
         return autor;
     }
+
+
 
 }

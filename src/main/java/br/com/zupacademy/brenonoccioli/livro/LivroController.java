@@ -4,17 +4,17 @@ import br.com.zupacademy.brenonoccioli.autor.Autor;
 import br.com.zupacademy.brenonoccioli.autor.AutorRepository;
 import br.com.zupacademy.brenonoccioli.categoria.Categoria;
 import br.com.zupacademy.brenonoccioli.categoria.CategoriaRepository;
+import br.com.zupacademy.brenonoccioli.livro.dto.ListaLivroDto;
 import br.com.zupacademy.brenonoccioli.livro.dto.LivroDto;
 import br.com.zupacademy.brenonoccioli.livro.form.LivroForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 
@@ -41,5 +41,17 @@ public class LivroController {
         }
 
         return ResponseEntity.notFound().build();
+    }
+
+    @GetMapping
+    public List<ListaLivroDto> listaDeLivros(){
+
+        List<Livro> livros = livroRepository.findAll();
+
+        return ListaLivroDto.converter(livros);
+
+
+
+
     }
 }
