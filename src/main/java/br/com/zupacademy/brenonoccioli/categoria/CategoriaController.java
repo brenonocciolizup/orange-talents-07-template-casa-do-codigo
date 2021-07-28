@@ -30,7 +30,5 @@ public class CategoriaController {
         Categoria categoria = form.toModel();
         repository.save(categoria);
         return ResponseEntity.ok().body(new CategoriaDto(categoria));
-
-
     }
 }
