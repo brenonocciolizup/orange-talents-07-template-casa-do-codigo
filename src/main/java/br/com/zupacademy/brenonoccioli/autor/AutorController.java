@@ -16,13 +16,6 @@ public class AutorController {
 
     @Autowired
     private AutorRepository autorRepository;
-    @Autowired
-    private ValidaEmailDuplicadoValidator validaEmailDuplicadoValidator;
-
-    @InitBinder
-    public void inicio(WebDataBinder binder){
-        binder.addValidators(validaEmailDuplicadoValidator);
-    }
 
 
     //realiza cadastro de novo autor

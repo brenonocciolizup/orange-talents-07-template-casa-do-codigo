@@ -2,6 +2,7 @@ package br.com.zupacademy.brenonoccioli.autor.form;
 
 
 import br.com.zupacademy.brenonoccioli.autor.Autor;
+import br.com.zupacademy.brenonoccioli.validador.UniqueValue;
 
 import javax.persistence.Column;
 import javax.validation.constraints.Email;
@@ -11,7 +12,7 @@ import javax.validation.constraints.Size;
 public class AutorForm {
     @NotBlank
     private String nome;
-    @NotBlank @Email @Column(unique = true)
+    @NotBlank @Email @Column(unique = true) @UniqueValue(domainClass = Autor.class, field = "email")
     private String email;
     @NotBlank @Size(max=400)
     private String descricao;
@@ -39,4 +40,5 @@ public class AutorForm {
     public Autor toModel() {
         return new Autor(this.nome, this.email, this.descricao);
     }
+
 }

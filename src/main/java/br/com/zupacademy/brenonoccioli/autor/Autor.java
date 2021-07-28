@@ -1,5 +1,6 @@
 package br.com.zupacademy.brenonoccioli.autor;
 
+import br.com.zupacademy.brenonoccioli.validador.UniqueValue;
 import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.*;
