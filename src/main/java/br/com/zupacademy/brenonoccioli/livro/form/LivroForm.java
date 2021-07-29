@@ -54,11 +54,12 @@ public class LivroForm {
     public Long getAutorId() {
         return autorId;
     }
-
+    // Setter para que o Jackson consiga realizar a desserialização; não encontrei outra forma de resolver isso
     public void setDataPublicacao(LocalDate dataPublicacao) {
         this.dataPublicacao = dataPublicacao;
     }
 
+    //Passei os dois objetos como parâmetros para conseguir pegar o objeto pelo get() do Optional
     public Livro toModel(Categoria categoria, Autor autor) {
         return new Livro(titulo, resumo, sumario, preco, numeroPaginas, isbn, dataPublicacao, categoria, autor);
     }

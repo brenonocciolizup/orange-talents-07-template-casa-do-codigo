@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
 import javax.validation.Valid;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -33,6 +32,8 @@ public class LivroController {
     public ResponseEntity<LivroDto> cadastrar(@RequestBody @Valid LivroForm form){
         Optional<Categoria> categoria = categoriaRepository.findById(form.getCategoriaId());
         Optional<Autor> autor = autorRepository.findById(form.getAutorId());
+
+
 
         if(categoria.isPresent() && autor.isPresent()){
             Livro livro = form.toModel(categoria.get(), autor.get());

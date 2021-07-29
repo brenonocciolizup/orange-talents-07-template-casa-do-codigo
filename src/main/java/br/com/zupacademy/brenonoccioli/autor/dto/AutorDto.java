@@ -2,7 +2,7 @@ package br.com.zupacademy.brenonoccioli.autor.dto;
 
 
 import br.com.zupacademy.brenonoccioli.autor.Autor;
-
+//retorno da criação de um novo autor
 public class AutorDto {
 
     private String nome;
