@@ -45,13 +45,18 @@ public class LivroController {
 
     @GetMapping
     public List<ListaLivroDto> listaDeLivros(){
-
         List<Livro> livros = livroRepository.findAll();
 
         return ListaLivroDto.converter(livros);
+    }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<DetalheLivroDto> detalhesLivro(@PathVariable Long id){
+        Optional<Livro> livro = livroRepository.findById(id);
 
-
-
+        if(livro.isPresent()){
+            return ResponseEntity.ok().body(new DetalheLivroDto(livro.get()));
+        }
+        return ResponseEntity.notFound().build();
     }
 }

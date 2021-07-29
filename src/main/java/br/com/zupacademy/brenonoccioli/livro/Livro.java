@@ -24,6 +24,7 @@ public class Livro {
     private String titulo;
     @NotBlank @Size(max=500)
     private String resumo;
+    @NotBlank
     private String sumario;
     @NotNull @Min(value=20)
     private BigDecimal preco;
