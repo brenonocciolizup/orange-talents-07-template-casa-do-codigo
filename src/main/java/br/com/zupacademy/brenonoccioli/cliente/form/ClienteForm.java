@@ -7,6 +7,9 @@ import br.com.zupacademy.brenonoccioli.estadosEpaises.PaisRepository;
 import br.com.zupacademy.brenonoccioli.cliente.Cliente;
 import br.com.zupacademy.brenonoccioli.validator.UniqueValue;
 import org.hibernate.validator.constraints.br.CPF;
+import org.hibernate.validator.internal.constraintvalidators.hv.br.CNPJValidator;
+import org.hibernate.validator.internal.constraintvalidators.hv.br.CPFValidator;
+import org.springframework.util.Assert;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -117,10 +120,6 @@ public class ClienteForm {
         return cep;
     }
 
-    public void setIdPais(Long idPais){
-        this.idPais = idPais;
-    }
-
 
 
     public Cliente toModel(PaisRepository paisRepository, EstadoRepository estadoRepository){
@@ -134,6 +133,19 @@ public class ClienteForm {
             return new Cliente(this.email, this.nome, this.sobrenome, this.documento, this.endereco,
                     this.complemento, this.cidade, paisOptional.get(), estadoOptional.get(), this.telefone, this.cep);
         }
+    }
 
+    public boolean documentoValido() {
+        Assert.hasLength(documento,
+                "documento não preenchido");
+
+        CPFValidator cpfValidator = new CPFValidator();
+        cpfValidator.initialize(null);
+
+        CNPJValidator cnpjValidator = new CNPJValidator();
+        cnpjValidator.initialize(null);
+
+        return cpfValidator.isValid(documento, null)
+                || cnpjValidator.isValid(documento, null);
     }
 }
