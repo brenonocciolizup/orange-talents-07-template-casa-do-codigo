@@ -1,6 +1,5 @@
-package br.com.zupacademy.brenonoccioli.autor;
+package br.com.zupacademy.brenonoccioli.config.validacao;
 
-import br.com.zupacademy.brenonoccioli.autor.dto.ErroFormDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;

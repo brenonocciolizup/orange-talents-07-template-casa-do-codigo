@@ -16,6 +16,10 @@ public class Estado {
     @NotNull
     private Long idPais;
 
+
+    @Deprecated
+    public Estado(){}
+
     public Estado(String nome, Long idPais){
         this.nome = nome;
         this.idPais = idPais;

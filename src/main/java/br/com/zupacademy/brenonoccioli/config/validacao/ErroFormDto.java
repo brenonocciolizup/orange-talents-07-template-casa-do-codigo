@@ -1,4 +1,4 @@
-package br.com.zupacademy.brenonoccioli.autor.dto;
+package br.com.zupacademy.brenonoccioli.config.validacao;
 
 public class ErroFormDto {
 

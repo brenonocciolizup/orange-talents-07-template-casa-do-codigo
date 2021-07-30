@@ -2,6 +2,7 @@ package br.com.zupacademy.brenonoccioli.categoria;
 
 import br.com.zupacademy.brenonoccioli.categoria.dto.CategoriaDto;
 import br.com.zupacademy.brenonoccioli.categoria.form.CategoriaForm;
+import br.com.zupacademy.brenonoccioli.config.validacao.CategoriaDuplicadaValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.WebDataBinder;

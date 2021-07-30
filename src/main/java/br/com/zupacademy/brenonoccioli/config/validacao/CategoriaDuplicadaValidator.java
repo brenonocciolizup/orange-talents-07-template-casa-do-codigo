@@ -1,6 +1,8 @@
-package br.com.zupacademy.brenonoccioli.categoria;
+package br.com.zupacademy.brenonoccioli.config.validacao;
 
 import br.com.zupacademy.brenonoccioli.autor.form.AutorForm;
+import br.com.zupacademy.brenonoccioli.categoria.Categoria;
+import br.com.zupacademy.brenonoccioli.categoria.CategoriaRepository;
 import br.com.zupacademy.brenonoccioli.categoria.form.CategoriaForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

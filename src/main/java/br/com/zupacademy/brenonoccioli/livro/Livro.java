@@ -2,19 +2,13 @@ package br.com.zupacademy.brenonoccioli.livro;
 
 import br.com.zupacademy.brenonoccioli.autor.Autor;
 import br.com.zupacademy.brenonoccioli.categoria.Categoria;
-import br.com.zupacademy.brenonoccioli.livro.dto.ListaLivroDto;
-import br.com.zupacademy.brenonoccioli.validador.UniqueValue;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.format.annotation.DateTimeFormat;
 
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 
 @Entity
 public class Livro {
@@ -32,9 +26,9 @@ public class Livro {
     private Integer numeroPaginas;
     @NotBlank
     private String isbn;
+
     @Future
     @NotNull
-    @JsonFormat(pattern = "dd/MM/yyyy", shape = JsonFormat.Shape.STRING)
     private LocalDate dataPublicacao;
     @NotNull @ManyToOne
     private Categoria categoria;

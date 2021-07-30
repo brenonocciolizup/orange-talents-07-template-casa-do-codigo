@@ -2,7 +2,7 @@ package br.com.zupacademy.brenonoccioli.autor.form;
 
 
 import br.com.zupacademy.brenonoccioli.autor.Autor;
-import br.com.zupacademy.brenonoccioli.validador.UniqueValue;
+import br.com.zupacademy.brenonoccioli.validator.UniqueValue;
 
 import javax.persistence.Column;
 import javax.validation.constraints.Email;

@@ -1,4 +1,4 @@
-package br.com.zupacademy.brenonoccioli.validador;
+package br.com.zupacademy.brenonoccioli.validator;
 
 import org.springframework.util.Assert;
 

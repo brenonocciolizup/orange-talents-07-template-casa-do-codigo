@@ -27,27 +27,20 @@ public class LivroController {
     @Autowired
     private CategoriaRepository categoriaRepository;
 
+
+
     @PostMapping("/cadastrar")
     @Transactional
     public ResponseEntity<LivroDto> cadastrar(@RequestBody @Valid LivroForm form){
-        Optional<Categoria> categoria = categoriaRepository.findById(form.getCategoriaId());
-        Optional<Autor> autor = autorRepository.findById(form.getAutorId());
 
-
-
-        if(categoria.isPresent() && autor.isPresent()){
-            Livro livro = form.toModel(categoria.get(), autor.get());
-            livroRepository.save(livro);
-            return ResponseEntity.ok().body(new LivroDto(livro));
-        }
-
-        return ResponseEntity.notFound().build();
+        Livro livro = form.toModel(categoriaRepository, autorRepository);
+        livroRepository.save(livro);
+        return ResponseEntity.ok().body(new LivroDto(livro));
     }
 
     @GetMapping
     public List<ListaLivroDto> listaDeLivros(){
         List<Livro> livros = livroRepository.findAll();
-
         return ListaLivroDto.converter(livros);
     }
 

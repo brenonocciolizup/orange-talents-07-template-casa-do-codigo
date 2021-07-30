@@ -1,4 +1,4 @@
-package br.com.zupacademy.brenonoccioli.validador;
+package br.com.zupacademy.brenonoccioli.validator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -7,12 +7,12 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Constraint(validatedBy = {UniqueValueValidator.class})
+@Constraint(validatedBy = {IdExistsValidator.class})
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface UniqueValue {
-    //gera mensagem default
-    String message() default "{o campo já foi cadastrado e não pode ser duplicado}";
+public @interface IdExists {
+
+    String message() default "{id não existe no banco de dados}";
 
     Class<?>[] groups() default{ };
 

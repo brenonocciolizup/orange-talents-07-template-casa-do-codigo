@@ -2,7 +2,7 @@ package br.com.zupacademy.brenonoccioli.estadosEpaises.form;
 
 import br.com.zupacademy.brenonoccioli.estadosEpaises.Estado;
 import br.com.zupacademy.brenonoccioli.estadosEpaises.Pais;
-import br.com.zupacademy.brenonoccioli.validador.UniqueValue;
+import br.com.zupacademy.brenonoccioli.validator.UniqueValue;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
